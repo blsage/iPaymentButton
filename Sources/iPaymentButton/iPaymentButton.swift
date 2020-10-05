@@ -16,9 +16,10 @@ public struct iPaymentButton: View {
     ///   - type: The text written on the button
     ///   - style: The color that the button should be
     ///   - action: The action to be performed when the user taps the button
-    public init(type: PKPaymentButtonType = .buy,
-                style: PKPaymentButtonStyle = .black,
-                action: @escaping () -> Void = { })
+    public init(action: @escaping () -> Void,
+                type: PKPaymentButtonType = .buy,
+                style: PKPaymentButtonStyle = .black
+                )
     {
         self.type = type
         self.style = style
@@ -26,7 +27,10 @@ public struct iPaymentButton: View {
     }
     
     public var body: some View {
-        Button(action: action, label: { EmptyView() } )
+        Button(action: {
+            self.action()
+            ExampleApplePayPopup().pay()
+        }, label: { EmptyView() } )
             .buttonStyle(iPaymentButtonStyle(type: type, style: style))
     }
 }
