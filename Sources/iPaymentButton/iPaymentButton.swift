@@ -18,7 +18,7 @@ public struct iPaymentButton: View {
     ///   - action: The action to be performed when the user taps the button
     public init(type: PKPaymentButtonType = .buy,
                 style: PKPaymentButtonStyle = .black,
-                action: @escaping () -> Void = { })
+                action: @escaping () -> Void)
     {
         self.type = type
         self.style = style
