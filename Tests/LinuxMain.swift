@@ -1,7 +1,7 @@
 import XCTest
 
-import PaymentsButtonTests
+import iPaymentButtonTests
 
 var tests = [XCTestCaseEntry]()
-tests += PaymentsButtonTests.allTests()
+tests += iPaymentButtonTests.allTests()
 XCTMain(tests)

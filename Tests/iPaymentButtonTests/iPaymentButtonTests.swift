@@ -1,12 +1,12 @@
 import XCTest
-@testable import PaymentsButton
+@testable import iPaymentButton
 
-final class PaymentsButtonTests: XCTestCase {
+final class iPaymentButtonTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
-        XCTAssertEqual(PaymentsButton().text, "Hello, World!")
+        XCTAssertEqual(iPaymentButton().text, "Hello, World!")
     }
 
     static var allTests = [
