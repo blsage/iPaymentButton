@@ -49,7 +49,7 @@ extension iPaymentButtonHelper {
         var type: PKPaymentButtonType
         var style: PKPaymentButtonStyle
         func makeUIView(context: Context) -> PKPaymentButton {
-            PKPaymentButton(iPaymentButtonType: type, iPaymentButtonStyle: style)
+            PKPaymentButton(paymentButtonType: type, paymentButtonStyle: style)
         }
         func updateUIView(_ uiView: PKPaymentButton, context: Context) { }
     }
