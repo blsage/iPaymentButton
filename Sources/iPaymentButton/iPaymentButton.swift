@@ -7,14 +7,23 @@ import SwiftUI
 /// which allows the button to be drawn and rendered complely using SwiftUI
 public struct iPaymentButton: View {
     
-    /// The action to be performed when the user taps the button
-    var action: () -> Void
+    private var type: PKPaymentButtonType
+    private var style: PKPaymentButtonStyle
+    private var action: () -> Void
     
-    /// The text written on the button
-    var type: PKPaymentButtonType = .buy
-    
-    /// The color that the button renders
-    var style: PKPaymentButtonStyle = .black
+    /// Creates a new payment button
+    /// - Parameters:
+    ///   - type: The text written on the button
+    ///   - style: The color that the button should be
+    ///   - action: The action to be performed when the user taps the button
+    public init(type: PKPaymentButtonType = .buy,
+                style: PKPaymentButtonStyle = .black,
+                action: @escaping () -> Void = { })
+    {
+        self.type = type
+        self.style = style
+        self.action = action
+    }
     
     public var body: some View {
         Button(action: action, label: { EmptyView() } )
