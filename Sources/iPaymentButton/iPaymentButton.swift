@@ -9,6 +9,7 @@ public struct iPaymentButton: View {
     
     private var type: PKPaymentButtonType
     private var style: PKPaymentButtonStyle
+    private var cornerRadius: CGFloat = 4.0
     private var action: () -> Void
     
     /// Creates a new payment button
@@ -27,7 +28,18 @@ public struct iPaymentButton: View {
     
     public var body: some View {
         Button(action: action, label: { EmptyView() } )
-            .buttonStyle(iPaymentButtonStyle(type: type, style: style))
+            .buttonStyle(iPaymentButtonStyle(type: type, style: style, cornerRadius: cornerRadius))
+    }
+}
+
+public extension iPaymentButton {
+    /// Modifies the corner radius of the payment button.
+    /// - Parameter radius: The desired corner radius
+    /// - Returns: A payment button with the desired corner radius
+    func cornerRadius(_ radius: CGFloat) -> iPaymentButton {
+        var view = self
+        view.cornerRadius = radius
+        return view
     }
 }
 
@@ -35,8 +47,9 @@ public struct iPaymentButton: View {
 fileprivate struct iPaymentButtonStyle: ButtonStyle {
     var type: PKPaymentButtonType
     var style: PKPaymentButtonStyle
+    var cornerRadius: CGFloat
     func makeBody(configuration: Self.Configuration) -> some View {
-        return iPaymentButtonHelper(type: type, style: style)
+        return iPaymentButtonHelper(type: type, style: style, cornerRadius: cornerRadius)
     }
 }
 
@@ -44,8 +57,9 @@ fileprivate struct iPaymentButtonStyle: ButtonStyle {
 fileprivate struct iPaymentButtonHelper: View {
     var type: PKPaymentButtonType
     var style: PKPaymentButtonStyle
+    var cornerRadius: CGFloat
     var body: some View {
-        iPaymentButtonRepresentable(type: type, style: style)
+        iPaymentButtonRepresentable(type: type, style: style, cornerRadius: cornerRadius)
             .frame(minWidth: 100, maxWidth: 400)
             .frame(height: 60)
             .frame(maxWidth: .infinity)
@@ -57,8 +71,16 @@ extension iPaymentButtonHelper {
     struct iPaymentButtonRepresentable: UIViewRepresentable {
         var type: PKPaymentButtonType
         var style: PKPaymentButtonStyle
+        var cornerRadius: CGFloat
+        
+        var button: PKPaymentButton {
+            let button = PKPaymentButton(paymentButtonType: type, paymentButtonStyle: style)
+            button.cornerRadius = cornerRadius
+            return button
+        }
+        
         func makeUIView(context: Context) -> PKPaymentButton {
-            PKPaymentButton(paymentButtonType: type, paymentButtonStyle: style)
+            return button
         }
         func updateUIView(_ uiView: PKPaymentButton, context: Context) { }
     }
