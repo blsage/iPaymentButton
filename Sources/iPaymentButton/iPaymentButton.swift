@@ -34,7 +34,11 @@ public struct iPaymentButton: View {
 
 public extension iPaymentButton {
     /// Modifies the corner radius of the payment button.
-    /// - Parameter radius: The desired corner radius
+    ///
+    /// To remove the rounded courners, set this value to 0.0.
+    ///
+    /// The default value is set to 4.0
+    /// - Parameter radius: The desired corner radius in points
     /// - Returns: A payment button with the desired corner radius
     func cornerRadius(_ radius: CGFloat) -> iPaymentButton {
         var view = self
