@@ -16,9 +16,8 @@ public struct iPaymentButton: View {
     ///   - type: The text written on the button
     ///   - style: The color that the button should be
     ///   - action: The action to be performed when the user taps the button
-    public init(action: @escaping () -> Void,
-                type: PKPaymentButtonType = .buy,
-                style: PKPaymentButtonStyle = .black
+    public init(type: PKPaymentButtonType = .buy,
+                style: PKPaymentButtonStyle = .black, action: @escaping () -> Void
                 )
     {
         self.type = type

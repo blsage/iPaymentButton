@@ -17,6 +17,21 @@ import UIKit
 import PassKit
 import SwiftUI
 
+
+@available(iOS 13.0.0, *)
+public struct DemoObjectView: View {
+    let picture = Bundle.module.path(forResource: "ExampleApp", ofType: "png")
+    
+    public init() {}
+    
+    public var body: some View {
+        Image("ExampleApp3")
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+    }
+}
+
+
 @available(iOS 11.0, *)
 public func ApplePayDemo() {
     ExampleApplePayPopup().pay()
