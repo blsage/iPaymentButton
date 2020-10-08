@@ -16,6 +16,7 @@
 import UIKit
 import PassKit
 import SwiftUI
+import iGraphics
 
 
 @available(iOS 13.0.0, *)
@@ -25,9 +26,7 @@ public struct DemoObjectView: View {
     public init() {}
     
     public var body: some View {
-        Image("ExampleApp3")
-            .resizable()
-            .aspectRatio(contentMode: .fit)
+        iGraphicsBox()
     }
 }
 
