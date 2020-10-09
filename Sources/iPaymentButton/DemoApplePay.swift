@@ -43,16 +43,25 @@ struct DemoPrimary: View {
 }
 
 
+@available(iOS 14.0.0, *)
+struct DemoGraphics: View {
+    var body: some View {
+        MediaApp()
+
+        iPaymentButton(type: .support, style: .whiteOutline, action: {
+            ApplePayDemo()
+        })
+    }
+}
+
+
 @available(iOS 13.0.0, *)
 public struct ShoppingApp: View {
     
     public init() {}
     
     public var body: some View {
-        iGraphicsBox()
-        iGraphicsBox()
-        iGraphicsBox()
-        iGraphicsImage(.first)
+        iGraphicsBox().stack(3)
     }
 }
 
@@ -64,6 +73,16 @@ public struct CardsApp: View {
     public var body: some View {
         iGraphicsBox(.card)
         iGraphicsBox(.caption)
+    }
+}
+
+@available(iOS 13.0.0, *)
+public struct MediaApp: View {
+    
+    public init() {}
+    
+    public var body: some View {
+        iGraphicsSwipeView(.first)
     }
 }
 
