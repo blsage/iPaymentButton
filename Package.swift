@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "iPaymentButton",
+    defaultLocalization: "en",
     platforms: [
         .iOS(.v13)
     ],
@@ -15,6 +16,7 @@ let package = Package(
             targets: ["iPaymentButton"]),
     ],
     dependencies: [
+        .package(url: "https://github.com/benjaminsage/iGraphics.git", from: "0.0.1")
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
     ],
@@ -23,7 +25,8 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "iPaymentButton",
-            dependencies: []),
+            dependencies: ["iGraphics"],
+            resources: [.process("ExampleApp.png")]),
         .testTarget(
             name: "iPaymentButtonTests",
             dependencies: ["iPaymentButton"]),
