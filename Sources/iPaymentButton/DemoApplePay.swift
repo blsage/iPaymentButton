@@ -20,15 +20,53 @@ import iGraphics
 
 
 @available(iOS 13.0.0, *)
-public struct DemoObjectView: View {
-    let picture = Bundle.module.path(forResource: "ExampleApp", ofType: "png")
+struct DemoDonation: View {
+    var body: some View {
+        CardsApp()
+        
+        iPaymentButton(type: .donate, style: .whiteOutline, action: {
+            ApplePayDemo()
+        })
+    }
+}
+
+
+@available(iOS 13.0.0, *)
+struct DemoPrimary: View {
+    var body: some View {
+        ShoppingApp()
+        
+        iPaymentButton(action: {
+            ApplePayDemo()
+        })
+    }
+}
+
+
+@available(iOS 13.0.0, *)
+public struct ShoppingApp: View {
     
     public init() {}
     
     public var body: some View {
         iGraphicsBox()
+        iGraphicsBox()
+        iGraphicsBox()
+        iGraphicsImage(.first)
     }
 }
+
+@available(iOS 13.0.0, *)
+public struct CardsApp: View {
+    
+    public init() {}
+    
+    public var body: some View {
+        iGraphicsBox(.card)
+        iGraphicsBox(.caption)
+    }
+}
+
 
 
 @available(iOS 11.0, *)
