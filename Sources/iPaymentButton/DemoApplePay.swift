@@ -82,7 +82,7 @@ public struct MediaApp: View {
     public init() {}
     
     public var body: some View {
-        iGraphicsSwipeView(.first)
+        iGraphicsView(.first)
     }
 }
 
