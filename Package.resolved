@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "iGraphics",
+        "repositoryURL": "https://github.com/benjaminsage/iGraphics.git",
+        "state": {
+          "branch": null,
+          "revision": "eaeec808bbbac6df127fc87d6255cc8cfb91ec15",
+          "version": "0.0.5"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
