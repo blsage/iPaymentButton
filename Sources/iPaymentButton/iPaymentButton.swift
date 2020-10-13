@@ -3,7 +3,7 @@ import PassKit
 import SwiftUI
 
 @available(iOS 13.0, *)
-/// A payment button 💵 wrapper view around Apple's PassKit `PKPaymentButton` ☑️
+/// A **payment button** 💵 wrapper view around Apple's PassKit `PKPaymentButton` ☑️
 /// which allows the button to be drawn and rendered complely using SwiftUI. 🙌
 public struct iPaymentButton: View {
     
@@ -14,9 +14,9 @@ public struct iPaymentButton: View {
     
     /// Creates a new payment button. 🏗👷‍♀️💰
     /// - Parameters:
-    ///   - type: The text written on the button 🆒
-    ///   - style: The color that the button should be 🎨
-    ///   - action: The action to be performed when the user taps the button 🎬▶️
+    ///   - type: The **text** written on the button 🆒
+    ///   - style: The **color** that the button should be 🎨
+    ///   - action: The **action** to be performed when the user taps the button 🎬▶️
     public init(type: PKPaymentButtonType = .buy,
                 style: PKPaymentButtonStyle = .black,
                 action: @escaping () -> Void)
@@ -33,7 +33,7 @@ public struct iPaymentButton: View {
 }
 
 public extension iPaymentButton {
-    /// Modifies the corner radius of the payment button. ⬛️⚫️
+    /// Modifies the **corner radius** of the payment button. ⬛️⚫️
     ///
     /// To remove the rounded courners, set this value to 0.0. 0️⃣👌
     ///
