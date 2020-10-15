@@ -18,79 +18,74 @@ import PassKit
 import SwiftUI
 import iGraphics
 
+public extension iPaymentButton {
 
-@available(iOS 13.0.0, *)
-struct DemoDonation: View {
-    var body: some View {
-        CardsApp()
-        
-        iPaymentButton(type: .donate, style: .whiteOutline, action: {
-            ApplePayDemo()
-        })
+    @available(iOS 13.0.0, *)
+    struct DemoDonation: View {
+        public var body: some View {
+            VStack {
+                CardsApp()
+                iPaymentButton(type: .donate, style: .whiteOutline, action: {
+                    applePayDemo()
+                })
+            }
+        }
     }
-}
 
-
-@available(iOS 13.0.0, *)
-struct DemoPrimary: View {
-    var body: some View {
-        ShoppingApp()
-        
-        iPaymentButton(action: {
-            ApplePayDemo()
-        })
+    @available(iOS 13.0.0, *)
+    struct DemoPrimary: View {
+        public var body: some View {
+            VStack {
+                ShoppingApp()
+                iPaymentButton(action: {
+                    applePayDemo()
+                })
+            }
+        }
     }
-}
 
 
-@available(iOS 14.0.0, *)
-struct DemoGraphics: View {
-    var body: some View {
-        MediaApp()
-
-        iPaymentButton(type: .support, style: .whiteOutline, action: {
-            ApplePayDemo()
-        })
+    @available(iOS 14.0.0, *)
+    struct DemoGraphics: View {
+        public var body: some View {
+            VStack {
+                MediaApp()
+                iPaymentButton(type: .support, style: .whiteOutline, action: {
+                    applePayDemo()
+                })
+            }
+        }
     }
-}
 
 
-@available(iOS 13.0.0, *)
-public struct ShoppingApp: View {
-    
-    public init() {}
-    
-    public var body: some View {
-        iGraphicsBox().stack(3)
+    @available(iOS 13.0.0, *)
+    struct ShoppingApp: View {
+        public var body: some View {
+            iGraphicsBox()
+                .stack(3)
+        }
     }
-}
 
-@available(iOS 13.0.0, *)
-public struct CardsApp: View {
-    
-    public init() {}
-    
-    public var body: some View {
-        iGraphicsBox(.card)
-        iGraphicsBox(.caption)
+    @available(iOS 13.0.0, *)
+    struct CardsApp: View {
+        public var body: some View {
+            iGraphicsBox()
+                .stack([.card, .caption])
+        }
     }
-}
 
-@available(iOS 13.0.0, *)
-public struct MediaApp: View {
-    
-    public init() {}
-    
-    public var body: some View {
-        iGraphicsSwipeView(.first)
+    @available(iOS 13.0.0, *)
+    struct MediaApp: View {
+        public var body: some View {
+            iGraphicsSwipeView(.first)
+        }
     }
-}
 
 
-
-@available(iOS 11.0, *)
-public func ApplePayDemo() {
-    ExampleApplePayPopup().pay()
+    @available(iOS 11.0, *)
+    static func applePayDemo() {
+        ExampleApplePayPopup().pay()
+    }
 }
 
 public typealias PaymentCompletionHandler = (Bool) -> Void
