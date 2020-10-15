@@ -18,10 +18,10 @@ import PassKit
 import SwiftUI
 import iGraphics
 
-public extension iPaymentButton {
+extension iPaymentButton {
 
     @available(iOS 13.0.0, *)
-    struct DemoDonation: View {
+    public struct DemoDonation: View {
         public var body: some View {
             VStack {
                 CardsApp()
@@ -33,7 +33,7 @@ public extension iPaymentButton {
     }
 
     @available(iOS 13.0.0, *)
-    struct DemoPrimary: View {
+    public struct DemoPrimary: View {
         public var body: some View {
             VStack {
                 ShoppingApp()
@@ -46,7 +46,7 @@ public extension iPaymentButton {
 
 
     @available(iOS 14.0.0, *)
-    struct DemoGraphics: View {
+    public struct DemoGraphics: View {
         public var body: some View {
             VStack {
                 MediaApp()
@@ -59,7 +59,7 @@ public extension iPaymentButton {
 
 
     @available(iOS 13.0.0, *)
-    struct ShoppingApp: View {
+    public struct ShoppingApp: View {
         public var body: some View {
             iGraphicsBox()
                 .stack(3)
@@ -67,7 +67,7 @@ public extension iPaymentButton {
     }
 
     @available(iOS 13.0.0, *)
-    struct CardsApp: View {
+    public struct CardsApp: View {
         public var body: some View {
             iGraphicsBox()
                 .stack([.card, .caption])
@@ -75,7 +75,7 @@ public extension iPaymentButton {
     }
 
     @available(iOS 13.0.0, *)
-    struct MediaApp: View {
+    public struct MediaApp: View {
         public var body: some View {
             iGraphicsView(.first)
         }
@@ -83,7 +83,7 @@ public extension iPaymentButton {
 
 
     @available(iOS 11.0, *)
-    static func applePayDemo() {
+    public static func applePayDemo() {
         ExampleApplePayPopup().pay()
     }
 }
