@@ -77,7 +77,7 @@ public extension iPaymentButton {
     @available(iOS 13.0.0, *)
     struct MediaApp: View {
         public var body: some View {
-            iGraphicsSwipeView(.first)
+            iGraphicsView(.first)
         }
     }
 
