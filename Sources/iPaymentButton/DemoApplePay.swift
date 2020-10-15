@@ -199,7 +199,6 @@ extension ExampleApplePayPopup: PKPaymentAuthorizationControllerDelegate {
             completion(PKPaymentRequestPaymentMethodUpdate(paymentSummaryItems: paymentSummaryItems))
             return
         }
-        print("hi")
         
 //        var discountedSummaryItems = paymentSummaryItems
 //        let discount = PKPaymentSummaryItem(label: "Debit Card Discount", amount: NSDecimalNumber(string: "-2.00"))
