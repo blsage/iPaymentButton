@@ -1,4 +1,4 @@
-<h1 align="center"> iPaymentButton📖</p>
+<h1 align="center"> iPaymentButton💵 </p>
 <h3 align="center"> Quickly implement & easily customize Apple's required payment button 💵 </h3>
 <p align="center">
     <strong><a href="#get-started">Get Started</a></strong> |
@@ -8,7 +8,7 @@
     <strong><a href="#usage">Usage</a></strong>
 </p>
 <p align="center">
-    <img src="https://ibb.co/Lzr3XG9" alt="CI" />
+    <img src="https://i.ibb.co/vxhS6tL/Payment-View-1.png" alt="CI" />
 </p>
 
 <br/>
