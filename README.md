@@ -8,7 +8,7 @@
     <strong><a href="#usage">Usage</a></strong>
 </p>
 <p align="center">
-    <img src="https://i.ibb.co/vxhS6tL/Payment-View-1.png" alt="CI" width="70%"/>
+    <img src="https://github.com/AlexFine/SwiftUICode/blob/master/public/assets/img/iPaymentButton-Demo-1.gif" alt="CI" width="70%"/>
 </p>
 
 <br/>
