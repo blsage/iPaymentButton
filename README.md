@@ -8,7 +8,7 @@
     <strong><a href="#usage">Usage</a></strong>
 </p>
 <p align="center">
-    <img src="https://i.ibb.co/vxhS6tL/Payment-View-1.png" alt="CI" />
+    <img src="https://i.ibb.co/vxhS6tL/Payment-View-1.png" alt="CI" width="70%"/>
 </p>
 
 <br/>
