@@ -18,7 +18,7 @@ import PassKit
 import SwiftUI
 import iGraphics
 
-extension iPaymentButton {
+public extension iPaymentButton {
 
     @available(iOS 13.0.0, *)
     public struct DemoDonation: View {

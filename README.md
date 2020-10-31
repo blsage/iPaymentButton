@@ -1,5 +1,5 @@
-<h1 align="center"> iPaymentButton💵 </p>
-<h3 align="center"> Quickly implement & easily customize Apple's required payment button 💵 </h3>
+<h1 align="center"> iPaymentButton 💵 </p>
+<h3 align="center"> Quickly implement & easily customize the Apple Pay button. 🤑</h3>
 <p align="center">
     <strong><a href="#get-started">Get Started</a></strong> |
     <strong><a href="#examples">Examples</a></strong> |
